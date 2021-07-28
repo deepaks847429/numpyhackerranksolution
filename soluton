@@ -1,0 +1,134 @@
+import numpy
+
+def arrays(arr):
+    return(numpy.array(arr[::-1], float))
+    # complete this function
+    # use numpy.array
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
+      2
+      import numpy as np
+print(np.array(input().split(),int).reshape(3,3))
+
+3
+
+import numpy as np
+n, m = map(int, input().split())
+my_array = np.array([input().strip().split() for _ in range(n)], int)
+print(my_array.transpose())
+print(my_array.flatten())
+
+
+4
+import numpy as np
+n, m, p = map(int, input().split())
+my_array1=np.array([input().split() for _ in range(n)], int)
+my_array2=np.array([input().split() for _ in range(m)], int)
+print(np.concatenate((my_array1, my_array2), axis=0))
+
+5
+
+import numpy as np
+N= tuple(map(int, input().split()))
+
+print(np.zeros(N,int))
+print(np.ones(N,int))
+
+6
+import numpy as np
+N= tuple(map(int, input().split()))
+
+print(np.zeros(N,int))
+print(np.ones(N,int))
+
+7
+import numpy as np
+N= tuple(map(int, input().split()))
+
+print(np.zeros(N,int))
+print(np.ones(N,int))
+
+8
+import numpy as np
+n, m = map(int, input().split())
+a, b = (np.array([input().split() for _ in range(n)], dtype=int) for _ in range(2))
+print(a+b, a-b, a*b, a//b, a%b, a**b, sep='\n')
+
+9
+import numpy as np
+np.set_printoptions(legacy = '1.13')
+ar = np.array(input().strip().split(), float)
+print(np.floor(ar), np.ceil(ar), np.rint(ar), sep = "\n")
+
+
+10
+import numpy
+
+N, M = map(int, input().split())
+A = numpy.array([input().split() for _ in range(N)], int)
+print(numpy.prod(numpy.sum(A, axis=0), axis=0))
+
+11
+
+import numpy
+N, M = map(int, input().split())
+A = numpy.array([input().split() for _ in range(N)],int)
+print(numpy.max(numpy.min(A, axis=1), axis=0))
+
+12
+import numpy
+
+nm = input().split()
+n = int(nm[0])
+m = int(nm[1])
+arr = []
+for i in range(n):
+    m = list(map(int, input().split()))
+    arr.append(m)
+arr = numpy.array(arr)
+
+mean = numpy.mean(arr, axis = 1)
+var = numpy.var(arr, axis = 0)
+std = numpy.std(arr)
+
+print(mean)
+print(var)
+
+rnd = numpy.around(std, 11)
+print(rnd)
+
+
+13
+import numpy
+
+n = int(input())
+a = numpy.array([input().split() for _ in range(n)], int)
+b = numpy.array([input().split() for _ in range(n)], int)
+print(numpy.dot(a, b))
+
+14
+
+import numpy as np
+A = np.array(input().split(), int)
+B = np.array(input().split(), int)
+print(np.inner(A,B), np.outer(A,B), sep='\n')
+15
+
+import numpy
+
+poly = [float(x) for x in input().split()]
+x = float(input())
+
+print(numpy.polyval(poly, x))
+
+
+16
+
+import numpy as np
+a=int(input())
+array_1=np.array([input().split() for _ in range(a)], float)
+
+print(round(np.linalg.det(array_1),2))
+
